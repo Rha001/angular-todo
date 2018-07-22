@@ -31,7 +31,12 @@ export class AppComponent implements OnInit{
     window.localStorage.setItem('tasks', JSON.stringify(this.tasks));
   }
 
-  finishTask() {
-    
+  finishTask(taskId) {
+    this.tasks[taskId].status = AppComponent._DONE;
+    window.localStorage.setItem('tasks', JSON.stringify(this.tasks));
+  }
+
+  removeTask() {
+
   }
 }
