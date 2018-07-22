@@ -1,0 +1,39 @@
+.text-center {
+    text-align: center;
+}
+
+.text-center .input-container {
+    margin: 25px auto 30px;
+    width: fit-content;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+
+.text-center .input-container input, .text-center .input-container button {
+    line-height: 35px;
+    vertical-align: middle;
+}
+
+.text-center .input-container input {
+    border: none;
+    width: 300px;
+    outline: none;
+}
+
+.text-center .input-container button {
+    cursor: pointer;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    overflow: hidden;
+    outline: none;
+}
+
+.task {
+    text-align: left;
+}
+
+.task-list .done-button {
+    cursor: pointer;
+}
