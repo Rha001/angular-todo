@@ -5,14 +5,14 @@
       <button class="material-icons" (click)="submit()">add</button>
     </div>
     <ul class="list-group list-group-flush task-list">
-      <li class="list-group-item d-flex justify-content-between task" *ngFor="let task of tasks; let i = index">
-          {{ task.title }}
+      <li class="list-group-item d-flex justify-content-between task" *ngFor="let task of tasks | taskOrder; let i = index">
+          <div contenteditable="true" (blur)="updateTask(task, $event);">{{ task.title }}</div>
           <div *ngIf="task.status === 0;then doneButton; else removeButton"></div>
           <ng-template #doneButton>
-              <span class="material-icons badge-pill done-button" (click)="finishTask(i)" style="color:#007bff;">done</span>
+              <span class="material-icons badge-pill done-button" (click)="finishTask(task)" style="color:#007bff;">done</span>
           </ng-template>
           <ng-template #removeButton>
-              <span class="material-icons badge-pill done-button" (click)="removeTask(i)" style="color:#dc3545;">clear</span>
+              <span class="material-icons badge-pill done-button" (click)="removeTask(task)" style="color:#dc3545;">clear</span>
           </ng-template>
       </li>
     </ul>
