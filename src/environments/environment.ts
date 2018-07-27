@@ -3,7 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  api: {
+    url: 'http://localhost:8200',
+    endpoints: {
+      suggest: '/suggest'
+    }
+  }
 };
 
 /*
